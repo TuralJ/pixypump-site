@@ -1,8 +1,8 @@
 # pixypump-site
 
-The website for [PixyPump](https://pixypump.com), a pixel-art gym and calorie tracker for iPhone.
+The website for [PixyPump](https://www.pixypump.com), a pixel-art gym and calorie tracker for iPhone.
 
-- `support/index.html` is the Support URL (`https://pixypump.com/support/`)
+- `support/index.html` is the Support URL (`https://www.pixypump.com/support/`)
 - `index.html` redirects the home page to the support page
 - `CNAME` holds the custom domain
 
