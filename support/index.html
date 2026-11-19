@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>PixyPump Support</title>
+<meta name="description" content="Help for the PixyPump gym and calorie tracker: accounts, PixyPump Pro and subscriptions, backups, your data, and how to contact us.">
+<link rel="canonical" href="https://pixypump.com/support/">
+<meta name="theme-color" content="#030707">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 7' shape-rendering='crispEdges'%3E%3Cpath fill='%23B0DCF7' d='M0 0h1v1H0zM8 0h1v1H8zM0 1h2v5H0zM7 1h2v5H7zM2 3h5v1H2zM0 6h1v1H0zM8 6h1v1H8z'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Pixelify+Sans:wght@400;500;600&display=swap">
+<style>
+/* One dark page in the app's own look: pixel headings, smoked-glass cards, ice-blue accent, sand for emphasis. */
+:root {
+  --bg: #030707;
+  --bg-2: #07100F;
+  --ink: #EEF4FF;
+  --ice: #B0DCF7;
+  --sand: #D8BD92;
+  --mute: #A3B0B2;
+  --dim: #7E8B8D;
+  --glass-a: rgba(255,255,255,0.075);
+  --glass-b: rgba(255,255,255,0.025);
+  --line: rgba(255,255,255,0.09);
+  --px: "Pixelify Sans", "Courier New", monospace;
+  --sans: "Geist", system-ui, -apple-system, "Segoe UI", sans-serif;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 88px; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 17px;
+  line-height: 1.65;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+.wrap { max-width: 860px; margin: 0 auto; }
+a { color: var(--ice); text-underline-offset: 3px; }
+p { margin: 0; }
+:focus-visible { outline: 2px solid var(--ice); outline-offset: 3px; border-radius: 6px; }
+h1, h2, h3 { font-family: var(--px); font-weight: 500; margin: 0; line-height: 1.08; text-wrap: balance; }
+h1 { font-size: clamp(46px, 10vw, 88px); }
+h2 { font-size: clamp(30px, 5vw, 42px); }
+.eyebrow { font-family: var(--px); font-size: 15px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--ice); margin: 0 0 14px; }
+.lede { font-size: 20px; color: var(--mute); max-width: 34em; }
+.bars { display: inline-flex; gap: 5px; vertical-align: middle; }
+.bars i { display: block; width: 12px; height: 8px; border-radius: 4px; background: rgba(238,244,255,0.16); }
+.bars i.on { background: var(--ice); }
+.btn { font-family: var(--px); font-size: 20px; background: var(--ink); color: var(--bg); border: 0; border-radius: 999px; padding: 14px 30px; cursor: pointer; display: inline-block; text-decoration: none; line-height: 1.2; }
+.btn.ghost { background: transparent; color: var(--ink); border: 1px solid rgba(255,255,255,0.18); }
+.glass { background: linear-gradient(180deg, var(--glass-a), var(--glass-b)); border: 1px solid var(--line); border-radius: 32px; }
+
+header.top { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 28px; }
+.logo { font-family: var(--px); font-size: 24px; display: flex; align-items: center; gap: 12px; color: var(--ink); text-decoration: none; }
+header.top .tag { font-family: var(--px); font-size: 15px; color: var(--dim); }
+
+.hero { padding-block: 40px 40px; }
+.hero .lede { margin-top: 22px; }
+
+.chips { display: flex; flex-wrap: wrap; gap: 10px; padding-block: 8px 24px; }
+.chips a { font-family: var(--px); font-size: 17px; color: var(--mute); text-decoration: none; border: 1px solid var(--line); border-radius: 999px; padding: 8px 18px; }
+.chips a:hover { color: var(--ink); border-color: rgba(255,255,255,0.25); }
+
+.contact { padding: 36px; display: grid; gap: 22px; margin-block: 8px 24px; }
+.contact h2 { color: var(--sand); }
+.mail { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+.mail code { font-family: var(--px); font-size: clamp(22px, 5vw, 30px); color: var(--ink); overflow-wrap: anywhere; }
+.mail button { font-family: var(--px); font-size: 17px; color: var(--ink); background: transparent; border: 1px solid rgba(255,255,255,0.18); border-radius: 999px; padding: 8px 18px; cursor: pointer; }
+.include { margin: 0; padding: 0; list-style: none; display: grid; gap: 8px; color: var(--mute); font-size: 16px; }
+.include li::before { content: "› "; color: var(--ice); font-family: var(--px); }
+.small { color: var(--dim); font-size: 15px; }
+
+section.group { padding-block: 40px 8px; }
+section.group > h2 { margin-bottom: 20px; }
+.faq { display: grid; gap: 10px; }
+.faq details { border: 1px solid var(--line); border-radius: 24px; padding: 4px 24px; background: linear-gradient(180deg, var(--glass-a), var(--glass-b)); }
+.faq summary { cursor: pointer; font-family: var(--px); font-size: 20px; padding: 16px 0; list-style: none; display: flex; justify-content: space-between; gap: 16px; line-height: 1.25; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; color: var(--ice); flex: none; }
+.faq details[open] summary::after { content: "–"; }
+.faq .a { color: var(--mute); padding-bottom: 18px; display: grid; gap: 10px; max-width: 40em; }
+.faq .a b { color: var(--ink); font-weight: 600; }
+.faq .a ol, .faq .a ul { margin: 0; padding-left: 1.25em; display: grid; gap: 4px; }
+.path { font-family: var(--px); color: var(--sand); }
+
+footer { margin-top: 56px; border-top: 1px solid var(--line); padding-block: 36px 56px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; color: var(--dim); font-size: 14.5px; }
+footer .logo { font-size: 20px; }
+
+@media (max-width: 560px) {
+  .contact { padding: 24px; border-radius: 28px; }
+  .faq details { padding-inline: 18px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+@media (prefers-reduced-motion: no-preference) { .btn { transition: transform .15s ease; } .btn:hover { transform: translateY(-2px); } }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <a class="logo" href="/support/">PixyPump <span class="bars" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span></a>
+    <span class="tag">Support</span>
+  </header>
+
+  <main>
+    <div class="hero">
+      <p class="eyebrow">Support</p>
+      <h1>How can we help?</h1>
+      <p class="lede">Answers about your account, PixyPump Pro, backups and your data are below. If you do not find what you need, email us and we will reply.</p>
+    </div>
+
+    <nav class="chips" aria-label="Topics">
+      <a href="#contact">Contact</a>
+      <a href="#start">Getting started</a>
+      <a href="#workouts">Workouts</a>
+      <a href="#food">Food</a>
+      <a href="#account">Account</a>
+      <a href="#pro">Pro</a>
+      <a href="#data">Your data</a>
+      <a href="#fix">Troubleshooting</a>
+    </nav>
+
+    <section class="contact glass" id="contact" aria-labelledby="contact-h">
+      <div>
+        <h2 id="contact-h">Email us</h2>
+        <p class="lede" style="margin-top:12px">Tell us what happened and we will help you sort it out.</p>
+      </div>
+      <div class="mail">
+        <code id="addr">support@pixypump.com</code>
+        <button type="button" id="copy">Copy address</button>
+      </div>
+      <div>
+        <a class="btn" href="mailto:support@pixypump.com?subject=PixyPump%20support">Write an email ›</a>
+      </div>
+      <div>
+        <p style="margin-bottom:10px">It helps if you include:</p>
+        <ul class="include">
+          <li>Your iPhone model and iOS version</li>
+          <li>The PixyPump version, shown in Settings under About &amp; credits</li>
+          <li>What you did, what you expected and what happened instead</li>
+          <li>A screenshot, if the problem is something you can see</li>
+        </ul>
+      </div>
+      <p class="small">For billing questions, please also tell us the email on your Apple receipt. Never send us a password or a payment card number.</p>
+    </section>
+
+    <section class="group" id="start" aria-labelledby="start-h">
+      <h2 id="start-h">Getting started</h2>
+      <div class="faq">
+        <details><summary>What do I need to use PixyPump?</summary><div class="a"><p>An iPhone with iOS 17 or later. PixyPump is an iPhone app. There is no Android version.</p></div></details>
+        <details><summary>Do I need an account?</summary><div class="a"><p>No. PixyPump works fully without one, and everything you log stays on your iPhone. An account is optional. You can create one with Apple, Google or your email address to keep your progress safe.</p></div></details>
+        <details><summary>Is PixyPump free?</summary><div class="a"><p>Tracking workouts, food and progress is free. PixyPump Pro is an optional upgrade with extras. See the Pro section below.</p></div></details>
+      </div>
+    </section>
+
+    <section class="group" id="workouts" aria-labelledby="workouts-h">
+      <h2 id="workouts-h">Workouts</h2>
+      <div class="faq">
+        <details><summary>How do I change my plan?</summary><div class="a"><p>Open the Workout tab and tap the pencil. You can rename days, swap exercises, change the number of sets, and add or remove days. You can also switch to a different ready-made plan, and the app asks you to confirm first.</p></div></details>
+        <details><summary>Can I change just today's workout?</summary><div class="a"><p>Yes. Skipping, swapping or reordering exercises during a workout only changes that day. Your plan stays as it was.</p></div></details>
+        <details><summary>How does the rest timer work?</summary><div class="a"><p>There is one rest timer for the whole app. It keeps running while you move between exercises. When it ends, your iPhone alerts you. In Settings, in the Training section, you can turn the automatic timer after each set on or off and choose your usual rest length.</p></div></details>
+        <details><summary>I logged a set by mistake. How do I fix it?</summary><div class="a"><p>Tap the set to edit it. When you delete a set, a meal or a weigh-in, an Undo button appears for a few seconds.</p></div></details>
+        <details><summary>Can I use pounds instead of kilograms?</summary><div class="a"><p>Yes. Choose kg or lb in Settings, in the Profile section. Your history is stored precisely, so switching never changes a number you logged.</p></div></details>
+      </div>
+    </section>
+
+    <section class="group" id="food" aria-labelledby="food-h">
+      <h2 id="food-h">Food and calories</h2>
+      <div class="faq">
+        <details><summary>How do I log food?</summary><div class="a"><p>Open the Calories tab and pick a meal. You can scan a barcode, search your saved foods, create your own food, or use quick add to type in calories.</p></div></details>
+        <details><summary>A scanned product is wrong or not found</summary><div class="a"><p>Barcode details come from Open Food Facts, a free community database. Some products are missing or have mistakes, so check the label, especially if you have allergies. If a product is missing, create your own food or use quick add.</p></div></details>
+        <details><summary>How do I set my calorie and macro goals?</summary><div class="a"><p>Go to Settings, then the Food section, and tap your daily goals. You can type your own numbers or use the calculator, which suggests goals from your age, height, weight and aim. These are general estimates and not medical advice.</p></div></details>
+      </div>
+    </section>
+
+    <section class="group" id="account" aria-labelledby="account-h">
+      <h2 id="account-h">Your account</h2>
+      <div class="faq">
+        <details><summary>How do I create an account or sign in?</summary><div class="a"><p>Open Settings and go to the Account section, then tap <span class="path">Create account or sign in</span>. You can continue with Apple, Google or email. With email, we send you a 6-digit code and there is no password to remember.</p></div></details>
+        <details><summary>How do I sign out?</summary><div class="a"><p>In Settings, go to the Account section and tap <span class="path">Sign out</span>.</p></div></details>
+        <details><summary>How do I delete my account?</summary>
+          <div class="a">
+            <ol>
+              <li>Open Settings and go to the Account section.</li>
+              <li>Tap <span class="path">Delete account</span>.</li>
+              <li>Choose to delete the account only, or the account and the data on this iPhone.</li>
+            </ol>
+            <p>Your account and anything saved with it are removed. This cannot be undone. If you cannot get into the app, email us from the address you signed up with and we will delete the account for you.</p>
+          </div>
+        </details>
+        <details><summary>How do I move to a new iPhone?</summary><div class="a"><p>Create a backup on your old phone: in Settings, go to Data &amp; privacy and tap <span class="path">Create backup</span>. Save the file to Files or iCloud Drive. On the new phone, install PixyPump, go to the same place and tap <span class="path">Restore from backup</span>.</p></div></details>
+      </div>
+    </section>
+
+    <section class="group" id="pro" aria-labelledby="pro-h">
+      <h2 id="pro-h">PixyPump Pro and subscriptions</h2>
+      <div class="faq">
+        <details><summary>What does Pro include?</summary><div class="a"><p>Pro unlocks every look and turns on a weekly streak freeze. Tracking stays free forever. Pro adds extras on top.</p></div></details>
+        <details><summary>What plans are there?</summary><div class="a"><p>Monthly, yearly and lifetime, which you pay for once. Prices are shown in the app by the App Store in your own currency. A free trial is offered on plans where you are eligible, and the price after the trial is shown before you confirm.</p></div></details>
+        <details><summary>I paid, but Pro is not unlocked</summary>
+          <div class="a">
+            <ol>
+              <li>Open Settings and tap the PixyPump Pro row to open the Pro screen.</li>
+              <li>Tap <span class="path">Restore purchases</span>.</li>
+              <li>Make sure you are signed in to the same Apple ID you bought with.</li>
+            </ol>
+            <p>If that does not work, email us with your Apple receipt.</p>
+          </div>
+        </details>
+        <details><summary>How do I cancel my subscription?</summary>
+          <div class="a">
+            <p>Subscriptions are managed by Apple, and we cannot cancel them for you. On your iPhone, open <span class="path">Settings</span>, tap your name, then <span class="path">Subscriptions</span> and choose PixyPump. You can also tap <span class="path">Manage subscription</span> on the Pro screen in the app.</p>
+            <p>Cancel at least 24 hours before the renewal date to avoid the next charge. You keep Pro until the end of the period you paid for.</p>
+          </div>
+        </details>
+        <details><summary>How do I get a refund?</summary><div class="a"><p>Apple handles refunds for App Store purchases. Go to <a href="https://reportaproblem.apple.com" rel="noopener">reportaproblem.apple.com</a>, sign in, and choose the purchase.</p></div></details>
+      </div>
+    </section>
+
+    <section class="group" id="data" aria-labelledby="data-h">
+      <h2 id="data-h">Your data and privacy</h2>
+      <div class="faq">
+        <details><summary>Where is my data stored?</summary><div class="a"><p>Your workouts, food, body weight, plan and settings are stored in the app's private storage on your iPhone, protected by iOS. Deleting the app removes them, so make a backup first if you want to keep them.</p></div></details>
+        <details><summary>How do I back up or export my data?</summary><div class="a"><p>In Settings, go to Data &amp; privacy. <span class="path">Create backup</span> saves one file with everything, which you can restore later. <span class="path">Export as spreadsheet (CSV)</span> gives you your workouts and food as files you can open in Numbers or Excel.</p></div></details>
+        <details><summary>How do I delete all my data?</summary><div class="a"><p>In Settings, go to Data &amp; privacy and tap <span class="path">Delete my data</span>. It erases everything PixyPump stored on this iPhone, and you can choose to remove the workouts PixyPump saved to Apple Health too. This cannot be undone, so make a backup first if you might want your history back.</p></div></details>
+        <details><summary>What leaves my iPhone?</summary><div class="a"><p>When you scan a barcode, the barcode number is sent to Open Food Facts to look up the product. If you create an account, your sign-in details are kept so you can sign in. PixyPump has no ads and does not track you. The full Privacy Policy and Terms of Use are in the app, in Settings under Data &amp; privacy.</p></div></details>
+        <details><summary>How does Apple Health work?</summary><div class="a"><p>It is optional. If you turn it on, PixyPump can read your body weight and save your workouts to Apple Health. You choose exactly what is allowed in the Health app and can change it at any time.</p></div></details>
+      </div>
+    </section>
+
+    <section class="group" id="fix" aria-labelledby="fix-h">
+      <h2 id="fix-h">Troubleshooting</h2>
+      <div class="faq">
+        <details><summary>The rest timer did not alert me</summary><div class="a"><p>Check that rest alerts are allowed. In PixyPump, open Settings and look at the rest alert line in the Training section. If it says alerts are off, tap <span class="path">Open iPhone Settings</span> and allow notifications for PixyPump. If it offers <span class="path">Allow rest alerts</span>, tap that. Also check that a Focus mode is not silencing the app, and that iOS is up to date.</p></div></details>
+        <details><summary>The barcode scanner does not work</summary><div class="a"><p>PixyPump needs camera access to scan. Open the iPhone Settings app, tap PixyPump and turn on Camera. Hold the phone steady in good light. If a product still does not scan, use quick add or create your own food.</p></div></details>
+        <details><summary>My history is gone after reinstalling</summary><div class="a"><p>Deleting the app removes its data from your iPhone. If you made a backup, install PixyPump again and restore it from Settings, in Data &amp; privacy. If you did not, we cannot recover it, because your data is stored on your phone and not on our servers.</p></div></details>
+        <details><summary>Pro prices do not load</summary><div class="a"><p>Check your internet connection and that you are signed in to the App Store. Close and reopen the Pro screen. If the prices still do not appear, email us.</p></div></details>
+        <details><summary>I found a bug or have an idea</summary><div class="a"><p>We want to hear it. Email us with the details listed at the top of this page. Screenshots help a lot.</p></div></details>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <a class="logo" href="/support/">PixyPump <span class="bars" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span></a>
+    <span>pixypump.com</span>
+    <span>Apple, iPhone and App Store are trademarks of Apple Inc. Food data from Open Food Facts.</span>
+  </footer>
+</div>
+
+<script>
+(function () {
+  var btn = document.getElementById("copy"), addr = document.getElementById("addr");
+  btn.addEventListener("click", function () {
+    function done(t) { btn.textContent = t; setTimeout(function () { btn.textContent = "Copy address"; }, 2000); }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(addr.textContent).then(function () { done("Copied"); }, function () { select(); });
+    } else { select(); }
+    function select() {
+      var r = document.createRange(); r.selectNodeContents(addr);
+      var s = window.getSelection(); s.removeAllRanges(); s.addRange(r); done("Press copy");
+    }
+  });
+  /* open the section that a link such as #pro points to */
+  if (location.hash) { var el = document.querySelector(location.hash); if (el && el.tagName === "DETAILS") el.open = true; }
+})();
+</script>
+</body>
+</html>
